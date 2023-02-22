@@ -28,7 +28,7 @@
     "webpack-cli": "^5.0.1"
   },
   "dependencies": {
-    "@cere/games-sdk": "0.0.1-rc.1",
+    "@cere/games-sdk": "0.0.1-rc.2",
     "cooljs": "^1.0.2"
   }
 }
