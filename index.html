@@ -69,9 +69,11 @@
         overShowOver()
 
         window.CereGamesSdk.saveScore(score).then(() => {
-          window.CereGamesSdk.showLeaderboard(() => {
-            // Restart the game
-            window.location.href = window.location.href + '?s=' + (+new Date());
+          window.CereGamesSdk.showLeaderboard({
+            onPlayAgain: () => {
+              // Restart the game
+              window.location.href = window.location.href + '?s=' + (+new Date());
+            }
           });
         });
       }
