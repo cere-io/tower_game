@@ -1,5 +1,3 @@
-const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
-
 module.exports = (env, options) => {
   return {
     mode: "production",
@@ -11,10 +9,6 @@ module.exports = (env, options) => {
     output: {
       publicPath: "/dist/",
     },
-
-    plugins: [
-      new NodePolyfillPlugin()
-    ],
 
     module: {
       rules: [

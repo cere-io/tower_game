@@ -1,12 +1,12 @@
 CERE Games SDK integration guide
 ===
 
-In order to integrate [CERE Games SDK](https://github.com/cere-io/cere-games-sdk/tree/master/packages/sdk) into a game, the game developer needs to follow these steps:
-1. [Install the SDK package](https://github.com/cere-io/cere-games-sdk/tree/master/packages/sdk#installation)
+In order to integrate [CERE Games SDK](https://www.npmjs.com/package/@cere/games-sdk) into a game, the game developer needs to follow these steps:
+1. [Install the SDK package](https://www.npmjs.com/package/@cere/games-sdk#installation)
 ```bash
 npm install --save @cere/games-sdk
 ```
-2. [Create](https://github.com/cere-io/cere-games-sdk/tree/master/packages/sdk#gamessdk) and [initialize](https://github.com/cere-io/cere-games-sdk/tree/master/packages/sdk#init) the SDK instance as soon as possible on on the game's page (eg. on page load)
+2. [Create](https://www.npmjs.com/package/@cere/games-sdk#gamessdk) and [initialize](https://www.npmjs.com/package/@cere/games-sdk#init) the SDK instance as soon as possible on on the game's page (eg. on page load)
 ```ts
 const { GamesSDK } = require("@cere/games-sdk");
 
@@ -20,7 +20,7 @@ window.CereGamesSdk = new GamesSDK({
 window.CereGamesSdk.init();
 
 ```
-3. [Show the preloader modal](https://github.com/cere-io/cere-games-sdk/tree/master/packages/sdk#showpreloader) as soon as the SDK is ready
+3. [Show the preloader modal](https://www.npmjs.com/package/@cere/games-sdk#showpreloader) as soon as the SDK is ready
 ```ts
 new GamesSDK({
   // ...
@@ -37,13 +37,13 @@ new GamesSDK({
 ```ts
 window.gamesSdkPreloader.setReady();
 ```
-5. [Save the player's score](https://github.com/cere-io/cere-games-sdk/tree/master/packages/sdk#savescore) when the game is over
+5. [Save the player's score](https://www.npmjs.com/package/@cere/games-sdk#savescore) when the game is over
 ```ts
 window.CereGamesSdk.saveScore(score).then(() => {
   // The score is saved
 });
 ```
-6. [Show the leader board](https://github.com/cere-io/cere-games-sdk/tree/master/packages/sdk#showpreloader) right after the score is saved
+6. [Show the leader board](https://www.npmjs.com/package/@cere/games-sdk#showpreloader) right after the score is saved
 ```ts
 window.CereGamesSdk.showLeaderboard({
   onPlayAgain: () => {
