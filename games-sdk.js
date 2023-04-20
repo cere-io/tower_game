@@ -1,10 +1,13 @@
 const { GamesSDK } = require("@cere/games-sdk");
 
 window.CereGamesSdk = new GamesSDK({
-  gameId: 'tower-game',
   env: 'dev',
-  onWalletDisconnect: () => {
-    window.location.reload();
+  gameId: 'tower-game',
+
+  gameInfo: {
+    name: 'Tower Game',
+    tags: ['towergame', 'web3', 'gamer'],
+    url: window.location.href,
   },
 
   onReady: (sdk) => {
@@ -13,6 +16,10 @@ window.CereGamesSdk = new GamesSDK({
         document.getElementById('start')?.click();
       }
     });
+  },
+
+  onWalletDisconnect: () => {
+    window.location.reload()
   },
 });
 
